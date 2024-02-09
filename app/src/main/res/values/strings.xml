@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mornhouse numbers</string>
+    <string name="get_fact_btn_text">Get fact</string>
+    <string name="get_fact_random_btn_text">Get fact about random number</string>
+</resources>

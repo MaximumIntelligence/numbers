@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.home.HomeActivity">
+
+    <EditText
+        android:id="@+id/etNumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin_x0.5"
+        android:inputType="number"
+        android:maxLines="1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGetFact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_x0.5"
+        android:enabled="false"
+        android:text="@string/get_fact_btn_text"
+        app:layout_constraintEnd_toEndOf="@+id/etNumberInput"
+        app:layout_constraintStart_toStartOf="@+id/etNumberInput"
+        app:layout_constraintTop_toBottomOf="@+id/etNumberInput" />
+
+    <Button
+        android:id="@+id/btnGetFactRandom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_x0.5"
+        android:text="@string/get_fact_random_btn_text"
+        app:layout_constraintEnd_toEndOf="@+id/etNumberInput"
+        app:layout_constraintStart_toStartOf="@+id/etNumberInput"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetFact" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRequestsHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin_x0.5"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetFactRandom" />
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
